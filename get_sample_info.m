@@ -1,3 +1,8 @@
+% check to identify smokers/nonsmokers based on ESPAD scores
+% will make this more generic at some point
+
+% contact: lee.jollans@gmail.com
+
 clear
 load('/media/lee/Windows7_OS/Users/EJ/Google Drive/Ongoing/IMAGEN/anaysis/All_IMAGEN_code/EJsmokingdata/BRAIN300516/design.mat')
 disp(['N=' num2str(length(design.outcome))])

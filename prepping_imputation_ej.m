@@ -1,19 +1,30 @@
+% steps to prepare for missing data imputation
+% this will give you the trimmed means for each variable by sex and site
+% (other arguments can be added)
+% necessary step before using quick_impute.m
+
+% contact: lee.jollans@gmail.com
+
 clear all
+
+% load sex and site information
+
+% uncomment if you don't have dummy coded site
+% for n=1:size(data2impute,1)
+%     try
+%         all_site(n)=find(site2convert(n,:)==1);
+%     catch 
+%         all_site(n)=8;
+%     end
+% end
+
+% load your dataset to be imputed
 load('/media/lee/Windows7_OS/Users/EJ/Google Drive/Ongoing/IMAGEN/smoking_data_040717.mat')
-data2impute=covars(:,2:7);
-all_sex=covars(:,1)';
-for n=1:548,
-    try;
-        all_site(n)=find(covars(n,8:14)==1);
-    catch; 
-        all_site(n)=8;
-    end;
-end
-% 
-% load('/media/lee/Transcend/Data/IMAGEN/alldata030617.mat')
-% data2impute=alldata;
-% load('/media/lee/Windows7_OS/Users/EJ/Google Drive/Ongoing/IMAGEN/anaysis/All_IMAGEN_code/sexsite.mat')
-% sex=all_sex; site=all_site;
+% set data2impute to be the variables you want to impute
+data2impute=alldata;
+
+
+sex=all_sex; site=all_site;
 
 % task_type={'MID', 'SST', 'Faces'};
 % task_type={'GM'};

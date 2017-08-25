@@ -1,3 +1,8 @@
+% quick check to identify how much missing data there is to make
+% decisions about imputation
+
+% contact: lee.jollans@gmail.com
+
 task_type={'MID', 'SST', 'Faces'};
 data2impute= {'meanvoldata', 'stdvoldata', 'sumvoldata'};
 
